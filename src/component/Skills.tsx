@@ -1,4 +1,4 @@
-const Skills = () => {
+const Skills: React.FC = () => {
   return (
     <div>
       {/* SKILLS 영역 */}

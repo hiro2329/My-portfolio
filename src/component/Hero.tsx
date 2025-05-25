@@ -6,7 +6,7 @@ interface HeroProps {
   sectionRef: RefObject<HTMLElement | null>;
 }
 
-const Hero = ({ sectionRef }: HeroProps) => {
+const Hero: React.FC<HeroProps> = ({ sectionRef }) => {
   const [isMobile, setIsMobile] = useState<boolean>(false);
 
   useEffect(() => {

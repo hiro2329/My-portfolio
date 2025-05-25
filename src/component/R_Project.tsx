@@ -1,4 +1,4 @@
-const R_Project = () => {
+const R_Project: React.FC = () => {
   return (
     <section className="w-full ">
       <div className="max-w-7xl mx-auto  px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">

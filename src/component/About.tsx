@@ -1,4 +1,4 @@
-const About = () => {
+const About: React.FC = () => {
   return (
     // ABOUT 영역
     <div className="w-full flex items-center">

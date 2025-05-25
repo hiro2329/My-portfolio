@@ -5,7 +5,7 @@ import Introduce from "./component/Introduce";
 import Projects from "./component/Projects";
 import { useRef } from "react";
 
-function App() {
+const App: React.FC = () => {
   // useRef를 사용하여 각 섹션에 대한 참조를 생성
   const heroRef = useRef<HTMLElement>(null);
   const introduceRef = useRef<HTMLElement>(null);
@@ -23,6 +23,6 @@ function App() {
       <Projects sectionRef={projectRef} />
     </>
   );
-}
+};
 
 export default App;

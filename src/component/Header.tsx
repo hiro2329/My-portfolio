@@ -8,7 +8,11 @@ interface HeaderProps {
   projectRef: RefObject<HTMLElement | null>;
 }
 
-const Header = ({ heroRef, introduceRef, projectRef }: HeaderProps) => {
+const Header: React.FC<HeaderProps> = ({
+  heroRef,
+  introduceRef,
+  projectRef,
+}) => {
   // 모바일 메뉴 상태 관리
   const [mobileMenuOpen, setMobileMenuOpen] = useState<boolean>(false);
   // 스크롤 위치로 이동하는 함수
