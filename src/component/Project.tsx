@@ -10,13 +10,16 @@ const Project: React.FC<ProjectProps> = ({ project }) => {
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
         {/* Left: Text Content */}
         <div className="break-words w-full">
-          <h2 className="text-5xl sm:text-5xl md:text-7xl font-bold text-gray-900 mb-4 break-words truncate max-w-full">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold text-gray-900 mb-4 break-words max-w-full text-balance">
             {project.title}
           </h2>
           <p className="text-gray-600 text-base sm:text-lg mb-6 break-words max-w-full">
             <span className="block mb-2">{project.content}</span>
-            <span className="inline-block font-semibold text-gray-800 bg-blue-100 px-2 py-1 rounded">
-              기술스택: <span className="text-blue-600">{project.skill}</span>
+            <span className="inline-block font-semibold text-gray-500 bg-[#e3defc] px-2 py-1 rounded">
+              기술스택:{" "}
+              <span className="bg-gradient-to-r from-pink-400 to-indigo-400 bg-clip-text text-transparent font-semibold">
+                {project.skill}
+              </span>
             </span>
           </p>
           {/* <div className="linkto">
