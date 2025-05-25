@@ -7,7 +7,7 @@ interface HeroProps {
 }
 
 const Hero = ({ sectionRef }: HeroProps) => {
-  const [isMobile, setIsMobile] = useState(false);
+  const [isMobile, setIsMobile] = useState<boolean>(false);
 
   useEffect(() => {
     const handleResize = () => {

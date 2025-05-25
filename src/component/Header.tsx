@@ -10,7 +10,7 @@ interface HeaderProps {
 
 const Header = ({ heroRef, introduceRef, projectRef }: HeaderProps) => {
   // 모바일 메뉴 상태 관리
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState<boolean>(false);
   // 스크롤 위치로 이동하는 함수
 
   const scrollToSection = (ref: RefObject<HTMLElement | null>) => {
