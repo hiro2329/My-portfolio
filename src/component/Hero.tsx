@@ -44,25 +44,22 @@ const Hero: React.FC<HeroProps> = ({ sectionRef }) => {
                         차근차근 꾸준하게 성장 중인<br />
                         프론트엔드 개발자 마준범 입니다.
                     </div> */}
-          <div className="text-3xl font-bold tracking-tight text-gray-900 sm:text-6xl leading-relaxed sm:leading-[1.15] break-keep text-center w-full max-w-5xl px-2">
+          <div className="text-3xl font-bold tracking-tight text-gray-900 sm:text-6xl leading-10 sm:leading-[1.15] break-keep text-center w-full max-w-5xl px-2">
             {isMobile ? (
               <>
-                성취하며 느낀
+                작은 성취에서 큰 기쁨을 찾고,
                 <br />
-                행복을 오랫동안 기억하고,
+                꾸준한 걸음으로 성장해나가는
                 <br />
-                차근차근 꾸준하게 성장 중인
-                <br />
-                프론트엔드 개발자
-                <br />
-                마준범 입니다.
+                풀스택 개발자 마준범 입니다.
               </>
             ) : (
               <>
-                성취하며 느낀 행복을 오랫동안 기억하고, <br />
-                차근차근 꾸준하게 성장 중인
+                작은 성취에서 큰 기쁨을 찾고,
                 <br />
-                프론트엔드 개발자 마준범 입니다.
+                꾸준한 걸음으로 성장해나가는
+                <br />
+                풀스택 개발자 마준범입니다.
               </>
             )}
           </div>

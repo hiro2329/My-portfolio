@@ -9,15 +9,91 @@ const Skills: React.FC = () => {
               SKILLS
             </h2>
           </div>
-          <div className="grid grid-cols-2 gap-6 sm:grid-cols-4 sm:gap-10 items-center text-center mb-4">
-            <div>로고</div>
-            <div>로고</div>
-            <div>로고</div>
-            <div>로고</div>
-            <div>로고</div>
-            <div>로고</div>
-            <div>로고</div>
-            <div>로고</div>
+          <div className="grid grid-cols-4 gap-6 sm:grid-cols-4 sm:gap-10 items-center text-center mb-4">
+            <div className="flex justify-center items-center">
+              <img
+                src="typescript.svg"
+                className="w-10 h-10 sm:w-14 sm:h-14"
+                alt="TypeScript"
+              />
+            </div>
+            <div className="flex justify-center items-center">
+              <img
+                src="typescript.svg"
+                className="w-10 h-10 sm:w-14 sm:h-14"
+                alt="TypeScript"
+              />
+            </div>
+            <div className="flex justify-center items-center">
+              <img
+                src="typescript.svg"
+                className="w-10 h-10 sm:w-14 sm:h-14"
+                alt="TypeScript"
+              />
+            </div>
+            <div className="flex justify-center items-center">
+              <img
+                src="typescript.svg"
+                className="w-10 h-10 sm:w-14 sm:h-14"
+                alt="TypeScript"
+              />
+            </div>
+            <div className="flex justify-center items-center">
+              <img
+                src="typescript.svg"
+                className="w-10 h-10 sm:w-14 sm:h-14"
+                alt="TypeScript"
+              />
+            </div>
+            <div className="flex justify-center items-center">
+              <img
+                src="typescript.svg"
+                className="w-10 h-10 sm:w-14 sm:h-14"
+                alt="TypeScript"
+              />
+            </div>
+            <div className="flex justify-center items-center">
+              <img
+                src="typescript.svg"
+                className="w-10 h-10 sm:w-14 sm:h-14"
+                alt="TypeScript"
+              />
+            </div>
+            <div className="flex justify-center items-center">
+              <img
+                src="typescript.svg"
+                className="w-10 h-10 sm:w-14 sm:h-14"
+                alt="TypeScript"
+              />
+            </div>
+            <div className="flex justify-center items-center">
+              <img
+                src="typescript.svg"
+                className="w-10 h-10 sm:w-14 sm:h-14"
+                alt="TypeScript"
+              />
+            </div>
+            <div className="flex justify-center items-center">
+              <img
+                src="typescript.svg"
+                className="w-10 h-10 sm:w-14 sm:h-14"
+                alt="TypeScript"
+              />
+            </div>
+            <div className="flex justify-center items-center">
+              <img
+                src="typescript.svg"
+                className="w-10 h-10 sm:w-14 sm:h-14"
+                alt="TypeScript"
+              />
+            </div>
+            <div className="flex justify-center items-center">
+              <img
+                src="typescript.svg"
+                className="w-10 h-10 sm:w-14 sm:h-14"
+                alt="TypeScript"
+              />
+            </div>
           </div>
         </div>
       </section>
