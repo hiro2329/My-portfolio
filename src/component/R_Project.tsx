@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import type { Project } from "../data/data"; // data.ts에서 export한 타입
 
 interface ProjectProps {
@@ -23,6 +24,13 @@ const R_Project: React.FC<ProjectProps> = ({ project }) => {
               </span>
             </span>
           </p>
+          <div className="linkto">
+            <Link to={`/detail/${project.id}`}>
+              <button className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">
+                자세히 보기
+              </button>
+            </Link>
+          </div>
         </div>
       </div>
     </section>

@@ -1,6 +1,6 @@
 import { useState } from "react";
-
 import type { RefObject } from "react";
+import { Link } from "react-router-dom";
 
 interface HeaderProps {
   heroRef: RefObject<HTMLElement | null>;
@@ -34,7 +34,7 @@ const Header: React.FC<HeaderProps> = ({
                 className="cursor-pointer text-sm/6 font-semibold text-gray-900 bg-transparent transition hover:text-blue-600"
                 onClick={() => scrollToSection(heroRef)}
               >
-                Home
+                <Link to="/">Home</Link>
               </li>
             </ul>
           </div>
@@ -129,7 +129,7 @@ const Header: React.FC<HeaderProps> = ({
                         setMobileMenuOpen(false);
                       }}
                     >
-                      Home
+                      <Link to="/">Home</Link>
                     </button>
                     <button
                       className="-mx-3 block w-full text-left rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"

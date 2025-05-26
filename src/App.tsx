@@ -3,7 +3,10 @@ import Header from "./component/Header";
 import Hero from "./component/Hero";
 import Introduce from "./component/Introduce";
 import Projects from "./component/Projects";
+import DetailProject from "./pages/DetailProject";
 import { useRef } from "react";
+
+import { Routes, Route } from "react-router-dom";
 
 const App: React.FC = () => {
   // useRef를 사용하여 각 섹션에 대한 참조를 생성
@@ -18,9 +21,19 @@ const App: React.FC = () => {
         introduceRef={introduceRef}
         projectRef={projectRef}
       />
-      <Hero sectionRef={heroRef} />
-      <Introduce sectionRef={introduceRef} />
-      <Projects sectionRef={projectRef} />
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <>
+              <Hero sectionRef={heroRef} />
+              <Introduce sectionRef={introduceRef} />
+              <Projects sectionRef={projectRef} />
+            </>
+          }
+        />
+        <Route path="/detail/:id" element={<DetailProject />} />
+      </Routes>
     </>
   );
 };
