@@ -3,7 +3,9 @@ import Header from "./component/Header";
 import Hero from "./component/Hero";
 import Introduce from "./component/Introduce";
 import Projects from "./component/Projects";
+import Timeline from "./component/Timeline";
 import DetailProject from "./pages/DetailProject";
+import Contact from "./component/Contact";
 import { useRef } from "react";
 
 import { Routes, Route } from "react-router-dom";
@@ -13,6 +15,8 @@ const App: React.FC = () => {
   const heroRef = useRef<HTMLElement>(null);
   const introduceRef = useRef<HTMLElement>(null);
   const projectRef = useRef<HTMLElement>(null);
+  const timelineRef = useRef<HTMLElement>(null);
+  const contactRef = useRef<HTMLElement>(null);
 
   return (
     <>
@@ -20,6 +24,8 @@ const App: React.FC = () => {
         heroRef={heroRef}
         introduceRef={introduceRef}
         projectRef={projectRef}
+        timelineRef={timelineRef}
+        contactRef={contactRef}
       />
       <Routes>
         <Route
@@ -29,6 +35,8 @@ const App: React.FC = () => {
               <Hero sectionRef={heroRef} />
               <Introduce sectionRef={introduceRef} />
               <Projects sectionRef={projectRef} />
+              <Timeline sectionRef={timelineRef} />
+              <Contact sectionRef={contactRef} />
             </>
           }
         />

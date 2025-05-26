@@ -28,7 +28,13 @@ const About: React.FC = () => {
           </p>
         </div>
         {/* Right: Image Placeholder */}
-        <div className="w-full h-40 sm:h-56 md:h-64 bg-gray-200 bg-[repeating-linear-gradient(45deg,_#e5e7eb_0px,_#e5e7eb_1px,_transparent_1px,_transparent_20px)] rounded-lg shadow-inner" />
+        <div className="w-full h-60 sm:h-80 md:h-96 bg-gray-200 bg-[repeating-linear-gradient(45deg,_#e5e7eb_0px,_#e5e7eb_1px,_transparent_1px,_transparent_20px)] rounded-lg shadow-inner flex items-center justify-center">
+          <img
+            src="../projectImg/ankara_messi.png"
+            alt="About Image"
+            className="w-auto h-full object-cover rounded-lg"
+          />
+        </div>
       </div>
     </div>
   );

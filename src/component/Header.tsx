@@ -6,12 +6,16 @@ interface HeaderProps {
   heroRef: RefObject<HTMLElement | null>;
   introduceRef: RefObject<HTMLElement | null>;
   projectRef: RefObject<HTMLElement | null>;
+  timelineRef: RefObject<HTMLElement | null>;
+  contactRef: RefObject<HTMLElement | null>;
 }
 
 const Header: React.FC<HeaderProps> = ({
   heroRef,
   introduceRef,
   projectRef,
+  timelineRef,
+  contactRef,
 }) => {
   // 모바일 메뉴 상태 관리
   const [mobileMenuOpen, setMobileMenuOpen] = useState<boolean>(false);
@@ -75,11 +79,22 @@ const Header: React.FC<HeaderProps> = ({
             >
               Project
             </li>
-            {/* <li ...>Experience</li> */}
+            <li
+              className="cursor-pointer text-sm/6 font-semibold text-gray-900 bg-transparent transition hover:text-blue-600"
+              onClick={() => scrollToSection(timelineRef)}
+            >
+              Timeline
+            </li>
+            <li
+              className="cursor-pointer text-sm/6 font-semibold text-gray-900 bg-transparent transition hover:text-blue-600"
+              onClick={() => scrollToSection(contactRef)}
+            >
+              Contact
+            </li>
           </ul>
           <div className="hidden lg:flex lg:flex-1 lg:justify-end">
             <a href="#" className="text-sm/6 font-semibold text-gray-900">
-              Contact <span aria-hidden="true">&rarr;</span>
+              light/dark
             </a>
           </div>
         </nav>
@@ -149,11 +164,20 @@ const Header: React.FC<HeaderProps> = ({
                     >
                       Projects
                     </button>
+                    <button
+                      className="-mx-3 block w-full text-left rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
+                      onClick={() => {
+                        scrollToSection(timelineRef);
+                        setMobileMenuOpen(false);
+                      }}
+                    >
+                      Timeline
+                    </button>
 
                     <button
                       className="-mx-3 block w-full text-left rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
                       onClick={() => {
-                        scrollToSection(projectRef);
+                        scrollToSection(contactRef);
                         setMobileMenuOpen(false);
                       }}
                     >
