@@ -47,7 +47,7 @@ const Introduce: React.FC<IntroduceProps> = ({ sectionRef }) => {
           {/* 이미지 영역 */}
           <div className="w-full aspect-square flex items-center justify-center mb-8">
             <img
-              src="../projectImg/ankara_messi.png"
+              src="../Aboutme/MJB.JPG"
               alt="About"
               className="w-full h-full object-cover rounded-[2vw]"
             />

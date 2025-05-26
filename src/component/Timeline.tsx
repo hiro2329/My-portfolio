@@ -103,7 +103,7 @@ const Timeline: React.FC<TimelineProps> = ({ sectionRef }) => {
       ref={sectionLocalRef}
       className="min-h-screen bg-white flex flex-col justify-center items-center"
     >
-      <h2 className="text-3xl sm:text-7xl md:text-8xl font-bold text-gray-900 mb-8 text-center w-full px-4 mt-16 md:mt-24">
+      <h2 className="text-4xl sm:text-7xl md:text-8xl font-bold text-gray-900 mb-8 text-center w-full px-4 mt-16 md:mt-24">
         Timeline
       </h2>
       <div className="w-full py-10 flex-1 flex flex-col justify-center">

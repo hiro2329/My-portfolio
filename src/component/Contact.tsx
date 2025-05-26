@@ -12,43 +12,42 @@ const Contact: React.FC<ContactProps> = ({ sectionRef }) => {
     >
       {/* 왼쪽: 연락처 정보 */}
       <div className="flex flex-col justify-center items-start px-8 md:px-16 py-12">
-        <h2 className="text-7xl font-bold mb-8 text-gray-800">CONTACT</h2>
+        <h2 className="text-4xl md:text-7xl font-bold mb-8 text-gray-800">
+          CONTACT
+        </h2>
         <div className="space-y-8">
           <div>
             <span className="block text-lg font-semibold text-gray-700 mb-2">
               이메일
             </span>
-            <a
-              href="mailto:your.email@example.com"
-              className="text-2xl text-blue-600 hover:underline break-all"
-            >
-              your.email@example.com
-            </a>
+            <span className="text-2xl text-blue-600 break-all select-text">
+              hiro2329@naver.com
+            </span>
           </div>
           <div>
             <span className="block text-lg font-semibold text-gray-700 mb-2">
               GitHub
             </span>
             <a
-              href="https://github.com/your-github"
+              href="https://github.com/hiro2329"
               target="_blank"
               rel="noopener noreferrer"
               className="text-2xl text-blue-600 hover:underline break-all"
             >
-              github.com/your-github
+              https://github.com/hiro2329
             </a>
           </div>
           <div>
             <span className="block text-lg font-semibold text-gray-700 mb-2">
-              LinkedIn
+              velog
             </span>
             <a
-              href="https://linkedin.com/in/your-linkedin"
+              href="https://velog.io/@hiro2329/posts"
               target="_blank"
               rel="noopener noreferrer"
               className="text-2xl text-blue-600 hover:underline break-all"
             >
-              linkedin.com/in/your-linkedin
+              https://velog.io/@hiro2329/posts
             </a>
           </div>
         </div>

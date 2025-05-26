@@ -35,38 +35,6 @@ const DetailProject: React.FC = () => {
     );
 
   return (
-    // <div className="max-w-5xl mx-auto mt-10 px-4">
-    //   <div className="flex flex-col md:flex-row gap-8 items-center">
-    //     <div className="w-full md:w-1/2 flex justify-center">
-    //       <img
-    //         src={project.imgSrc}
-    //         alt={project.title}
-    //         className="rounded-lg shadow-lg w-full max-w-md object-cover"
-    //       />
-    //     </div>
-    //     <div className="w-full md:w-1/2 flex flex-col items-center md:items-start text-center md:text-left">
-    //       <h3 className="text-3xl font-bold mb-4">{project.title}</h3>
-    //       <p className="text-gray-600 mb-4">{project.content}</p>
-    //       <div className="mb-4">
-    //         <span className="font-semibold text-gray-800">기술스택: </span>
-    //         <span className="text-blue-600">{project.skill}</span>
-    //       </div>
-    //       {project.githubUrl && (
-    //         <a
-    //           href={project.githubUrl}
-    //           target="_blank"
-    //           rel="noopener noreferrer"
-    //           className="inline-block bg-gray-700 text-black px-5 py-2 rounded hover:bg-gray-700 transition mb-2"
-    //         >
-    //           GitHub 바로가기
-    //         </a>
-    //       )}
-    //       {project.detail && (
-    //         <div className="mt-3 text-gray-700">{project.detail}</div>
-    //       )}
-    //     </div>
-    //   </div>
-    // </div>
     <section className="min-h-screen bg-white flex items-center">
       <div ref={containerRef} className="relative isolate px-6 w-full">
         {/* 상단 배경 */}
@@ -82,35 +50,91 @@ const DetailProject: React.FC = () => {
             }}
           ></div>
         </div>
-        <div className="max-w-5xl mx-auto mt-10 px-4">
-          <div className="flex flex-col md:flex-row gap-8 items-center">
-            <div className="w-full md:w-1/2 flex justify-center">
+        <div className="max-w-5xl mx-auto mt-16 px-4">
+          <div className="flex flex-col md:flex-row gap-16 items-center">
+            {/* 이미지 */}
+            <div className="w-full md:w-1/2 flex justify-center mb-8 md:mb-0">
               <img
                 src={project.imgSrc}
                 alt={project.title}
-                className="rounded-lg shadow-lg w-full max-w-md object-cover"
+                className="rounded-2xl shadow-2xl w-full max-w-xl object-cover border border-gray-100"
               />
             </div>
+            {/* 상세 정보 */}
             <div className="w-full md:w-1/2 flex flex-col items-center md:items-start text-center md:text-left">
-              <h3 className="text-3xl font-bold mb-4">{project.title}</h3>
-              <p className="text-gray-600 mb-4">{project.content}</p>
-              <div className="mb-4">
-                <span className="font-semibold text-gray-800">기술스택: </span>
-                <span className="text-blue-600">{project.skill}</span>
+              <h1 className="text-4xl md:text-5xl font-extrabold mb-6 text-gray-900 break-words">
+                {project.title}
+              </h1>
+              {/* 날짜/태그 */}
+              <div className="flex flex-wrap gap-3 mb-6 justify-center md:justify-start">
+                {project.date && (
+                  <span className="inline-block bg-violet-100 text-violet-600 text-base md:text-lg px-4 py-2 rounded-full font-bold">
+                    {project.date}
+                  </span>
+                )}
+                {project.tags &&
+                  project.tags.map((tag) => (
+                    <span
+                      key={tag}
+                      className="inline-block bg-pink-100 text-pink-500 text-base md:text-lg px-4 py-2 rounded-full font-bold"
+                    >
+                      #{tag}
+                    </span>
+                  ))}
               </div>
-              {project.githubUrl && (
-                <a
-                  href={project.githubUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-block bg-gray-700 text-black px-5 py-2 rounded hover:bg-gray-700 transition mb-2"
-                >
-                  GitHub 바로가기
-                </a>
-              )}
+              {/* 한줄 설명 */}
+              <p className="text-gray-700 text-xl md:text-2xl mb-6 break-words font-semibold">
+                {project.content}
+              </p>
+              {/* 상세 설명 */}
               {project.detail && (
-                <div className="mt-3 text-gray-700">{project.detail}</div>
+                <div className="mt-3 text-gray-700 text-lg md:text-xl mb-8 break-words text-left w-full leading-relaxed">
+                  {project.detail}
+                </div>
               )}
+              {/* 기술스택 */}
+              <div className="mb-8 flex flex-wrap gap-3 justify-center md:justify-start">
+                <span className="font-bold text-gray-800 text-lg md:text-xl">
+                  기술스택:
+                </span>
+                {Array.isArray(project.skill) ? (
+                  project.skill.map((sk) => (
+                    <span
+                      key={sk}
+                      className="inline-block bg-blue-50 text-blue-700 text-base md:text-lg px-3 py-1 rounded font-semibold"
+                    >
+                      {sk}
+                    </span>
+                  ))
+                ) : (
+                  <span className="text-blue-600 text-base md:text-lg">
+                    {project.skill}
+                  </span>
+                )}
+              </div>
+              {/* 링크 */}
+              <div className="flex flex-wrap gap-4 mb-2 justify-center md:justify-start">
+                {project.githubUrl && (
+                  <a
+                    href={project.githubUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block bg-gray-900 text-white text-lg md:text-xl px-6 py-3 rounded-lg hover:bg-gray-700 transition font-bold shadow-md"
+                  >
+                    GitHub 바로가기
+                  </a>
+                )}
+                {project.demoUrl && (
+                  <a
+                    href={project.demoUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block bg-gradient-to-r from-pink-400 to-indigo-400 text-white text-lg md:text-xl px-6 py-3 rounded-lg hover:opacity-90 transition font-bold shadow-md"
+                  >
+                    데모 바로가기
+                  </a>
+                )}
+              </div>
             </div>
           </div>
         </div>
