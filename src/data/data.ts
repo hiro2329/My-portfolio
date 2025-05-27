@@ -18,7 +18,7 @@ const projectData: Project[] = [
     content:
       "리오넬 메시의 FC 바르셀로나 시절 득점 데이터를 분석하고 시각화하는 FastAPI 기반 웹 애플리케이션🏟️",
     skill: ["Python", "FastAPI", "Jinja2", "Plotly", "Render"],
-    imgSrc: "/ProjectImg/ankara_messi.png",
+    imgSrc: "../ProjectImg/ankara_messi.png",
     githubUrl: "https://github.com/hiro2329/Ankara_Messi",
     demoUrl: "https://ankara-messi.onrender.com/",
     detail:
