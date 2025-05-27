@@ -18,7 +18,7 @@ const projectData: Project[] = [
     content:
       "리오넬 메시의 FC 바르셀로나 시절 득점 데이터를 분석하고 시각화하는 FastAPI 기반 웹 애플리케이션🏟️",
     skill: ["Python", "FastAPI", "Jinja2", "Plotly", "Render"],
-    imgSrc: "../ProjectImg/ankara_messi.png",
+    imgSrc: "/projectImg/ankara_messi.png",
     githubUrl: "https://github.com/hiro2329/Ankara_Messi",
     demoUrl: "https://ankara-messi.onrender.com/",
     detail:
@@ -31,7 +31,7 @@ const projectData: Project[] = [
     title: "JB-Portfolio",
     content: "개인 포트폴리오 웹앱",
     skill: ["TypeScript", "JavaScript", "React", "Tailwind CSS", "Vite"],
-    imgSrc: "/ProjectImg/Portfolio.png",
+    imgSrc: "/projectImg/Portfolio.png",
     githubUrl: "https://github.com/hiro2329/My-portfolio",
     detail:
       "타입스크립트+리액트로 만든 개인 포트폴리오 웹앱입니다. Tailwind CSS를 사용하여 반응형 디자인을 구현하였으며, Vite로 빌드하여 빠른 로딩 속도를 자랑합니다. 이 포트폴리오는 저의 기술 스택과 프로젝트 경험을 소개합니다.",
@@ -49,7 +49,7 @@ const projectData: Project[] = [
       "Bootstrap",
       "AOS (Animate On Scroll)",
     ],
-    imgSrc: "/ProjectImg/Photo-Gallery.png",
+    imgSrc: "/projectImg/Photo-Gallery.png",
     githubUrl: "https://github.com/hiro2329/Photo-Gallery",
     demoUrl: "https://hiro2329.github.io/Photo-Gallery/",
     detail:
