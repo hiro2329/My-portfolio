@@ -33,6 +33,7 @@ const projectData: Project[] = [
     skill: ["TypeScript", "JavaScript", "React", "Tailwind CSS", "Vite"],
     imgSrc: "/projectImg/Portfolio.png",
     githubUrl: "https://github.com/hiro2329/My-portfolio",
+    demoUrl: "https://my-portfolio-pi-topaz-10.vercel.app/",
     detail:
       "타입스크립트+리액트로 만든 개인 포트폴리오 웹앱입니다. Tailwind CSS를 사용하여 반응형 디자인을 구현하였으며, Vite로 빌드하여 빠른 로딩 속도를 자랑합니다. 이 포트폴리오는 저의 기술 스택과 프로젝트 경험을 소개합니다.",
     date: "2024-05",
