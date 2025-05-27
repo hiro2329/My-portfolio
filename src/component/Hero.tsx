@@ -1,23 +1,11 @@
-import { useState, useEffect } from "react";
-
 import type { RefObject } from "react";
+import IntroTyping from "./IntroTyping";
 
 interface HeroProps {
   sectionRef: RefObject<HTMLElement | null>;
 }
 
 const Hero: React.FC<HeroProps> = ({ sectionRef }) => {
-  const [isMobile, setIsMobile] = useState<boolean>(false);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth < 640); // Tailwind sm 기준
-    };
-    handleResize();
-    window.addEventListener("resize", handleResize); // 창 크기가 바뀔 때마다(resize 이벤트)
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
   return (
     <section
       ref={sectionRef}
@@ -39,29 +27,8 @@ const Hero: React.FC<HeroProps> = ({ sectionRef }) => {
         </div>
         {/* 중앙 텍스트 영역 */}
         <div className="flex flex-col items-center justify-center min-h-[60vh] sm:min-h-[70vh]">
-          {/* <div className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl leading-relaxed sm:leading-[1.15] break-keep text-center max-w-xl">
-                        성취하며 느낀 행복을 오랫동안 기억하고, <br />
-                        차근차근 꾸준하게 성장 중인<br />
-                        프론트엔드 개발자 마준범 입니다.
-                    </div> */}
           <div className="text-3xl font-bold tracking-tight text-gray-900 sm:text-6xl leading-10 sm:leading-[1.15] break-keep text-center w-full max-w-5xl px-2">
-            {isMobile ? (
-              <>
-                작은 성취에서 큰 기쁨을 찾고,
-                <br />
-                꾸준한 걸음으로 성장해나가는
-                <br />
-                풀스택 개발자 마준범 입니다.
-              </>
-            ) : (
-              <>
-                작은 성취에서 큰 기쁨을 찾고,
-                <br />
-                꾸준한 걸음으로 성장해나가는
-                <br />
-                풀스택 개발자 마준범입니다.
-              </>
-            )}
+            <IntroTyping />
           </div>
         </div>
         {/* 하단 배경 */}

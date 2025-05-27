@@ -20,6 +20,7 @@ const projectData: Project[] = [
     skill: ["Python", "FastAPI", "Jinja2", "Plotly", "Render"],
     imgSrc: "/ProjectImg/ankara_messi.png",
     githubUrl: "https://github.com/hiro2329/Ankara_Messi",
+    demoUrl: "https://ankara-messi.onrender.com/",
     detail:
       "리오넬 메시의 FC 바르셀로나 시절 득점 데이터를 분석하고 시각화하는 FastAPI 기반 웹 애플리케이션입니다. 이 프로젝트는 메시의 득점 패턴, 득점 유형, 홈/원정 비율, 어시스트 분석 등을 시각적으로 보여줍니다.",
     date: "2025-04",
@@ -49,7 +50,7 @@ const projectData: Project[] = [
       "AOS (Animate On Scroll)",
     ],
     imgSrc: "/ProjectImg/Photo-Gallery.png",
-    githubUrl: "",
+    githubUrl: "https://github.com/hiro2329/Photo-Gallery",
     demoUrl: "https://hiro2329.github.io/Photo-Gallery/",
     detail:
       "Photo Gallery는 아름다운 순간들을 담은 사진들을 전시하는 개인 웹 갤러리입니다. 제주, 삿포로, 오사카, 헝가리, 그리고 동물 사진까지 다양한 테마로 구성된 작품들을 감상할 수 있습니다. 심플한 디자인과 반응형 레이아웃으로 어디서든 편리하게 즐길 수 있습니다.",

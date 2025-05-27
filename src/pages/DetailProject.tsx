@@ -53,7 +53,7 @@ const DetailProject: React.FC = () => {
         <div className="max-w-5xl mx-auto mt-16 px-4">
           <div className="flex flex-col md:flex-row gap-16 items-center">
             {/* 이미지 */}
-            <div className="w-full md:w-1/2 flex justify-center mb-8 md:mb-0">
+            <div className="w-full h-80 md:w-1/2 flex justify-center mb-8 md:mb-0">
               <img
                 src={project.imgSrc}
                 alt={project.title}

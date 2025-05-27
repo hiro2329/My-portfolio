@@ -1,126 +1,55 @@
+import {
+  FaReact,
+  FaNodeJs,
+  FaBootstrap,
+  FaHtml5,
+  FaCss3Alt,
+  FaJs,
+} from "react-icons/fa";
+import {
+  SiTypescript,
+  SiTailwindcss,
+  SiExpress,
+  SiMysql,
+  SiMongodb,
+  SiPython,
+} from "react-icons/si";
+
+const skills = [
+  { name: "JavaScript", icon: <FaJs className="text-yellow-400" /> },
+  { name: "TypeScript", icon: <SiTypescript className="text-blue-500" /> },
+  { name: "React", icon: <FaReact className="text-cyan-400" /> },
+  { name: "Node.js", icon: <FaNodeJs className="text-green-500" /> },
+  { name: "Express", icon: <SiExpress className="text-gray-700" /> },
+  { name: "MongoDB", icon: <SiMongodb className="text-green-700" /> },
+  { name: "MySQL", icon: <SiMysql className="text-blue-400" /> },
+  { name: "Tailwind", icon: <SiTailwindcss className="text-cyan-500" /> },
+  { name: "Bootstrap", icon: <FaBootstrap className="text-purple-600" /> },
+  { name: "HTML", icon: <FaHtml5 className="text-orange-500" /> },
+  { name: "CSS", icon: <FaCss3Alt className="text-blue-500" /> },
+  { name: "Python", icon: <SiPython className="text-blue-400" /> },
+];
+
 const Skills: React.FC = () => {
   return (
-    <div>
-      {/* SKILLS 영역 */}
-      <section className="w-full flex items-center ">
-        <div className="max-w-7xl mx-auto px-4 py-8 w-full">
-          <div className="text-center mb-8">
-            <h2 className="text-3xl font-bold text-gray-900 sm:text-5xl md:text-6xl mb-4">
-              SKILLS
-            </h2>
+    <div className="w-full flex flex-col items-center justify-center mt-4">
+      <h3 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4 font-[Comic Sans MS, Comic Sans, cursive]">
+        Skills
+      </h3>
+      <div className="w-full grid grid-cols-4 gap-3 md:gap-4 px-2 md:px-4">
+        {skills.map((skill) => (
+          <div
+            key={skill.name}
+            className="flex flex-col items-center justify-center text-xs md:text-sm font-semibold text-gray-700 hover:scale-110 transition-transform"
+          >
+            <span className="text-2xl md:text-3xl mb-1 drop-shadow-lg">
+              {skill.icon}
+            </span>
+            <span className="text-[0.8rem] md:text-sm text-gray-500 mt-1">
+              {skill.name}
+            </span>
           </div>
-          <div className="grid grid-cols-4 gap-6 sm:grid-cols-4 sm:gap-10 items-center text-center mb-4">
-            <div className="flex justify-center items-center">
-              <img
-                src="typescript.svg"
-                className="w-10 h-10 sm:w-14 sm:h-14"
-                alt="TypeScript"
-              />
-            </div>
-            <div className="flex justify-center items-center">
-              <img
-                src="typescript.svg"
-                className="w-10 h-10 sm:w-14 sm:h-14"
-                alt="TypeScript"
-              />
-            </div>
-            <div className="flex justify-center items-center">
-              <img
-                src="typescript.svg"
-                className="w-10 h-10 sm:w-14 sm:h-14"
-                alt="TypeScript"
-              />
-            </div>
-            <div className="flex justify-center items-center">
-              <img
-                src="typescript.svg"
-                className="w-10 h-10 sm:w-14 sm:h-14"
-                alt="TypeScript"
-              />
-            </div>
-            <div className="flex justify-center items-center">
-              <img
-                src="typescript.svg"
-                className="w-10 h-10 sm:w-14 sm:h-14"
-                alt="TypeScript"
-              />
-            </div>
-            <div className="flex justify-center items-center">
-              <img
-                src="typescript.svg"
-                className="w-10 h-10 sm:w-14 sm:h-14"
-                alt="TypeScript"
-              />
-            </div>
-            <div className="flex justify-center items-center">
-              <img
-                src="typescript.svg"
-                className="w-10 h-10 sm:w-14 sm:h-14"
-                alt="TypeScript"
-              />
-            </div>
-            <div className="flex justify-center items-center">
-              <img
-                src="typescript.svg"
-                className="w-10 h-10 sm:w-14 sm:h-14"
-                alt="TypeScript"
-              />
-            </div>
-            <div className="flex justify-center items-center">
-              <img
-                src="typescript.svg"
-                className="w-10 h-10 sm:w-14 sm:h-14"
-                alt="TypeScript"
-              />
-            </div>
-            <div className="flex justify-center items-center">
-              <img
-                src="typescript.svg"
-                className="w-10 h-10 sm:w-14 sm:h-14"
-                alt="TypeScript"
-              />
-            </div>
-            <div className="flex justify-center items-center">
-              <img
-                src="typescript.svg"
-                className="w-10 h-10 sm:w-14 sm:h-14"
-                alt="TypeScript"
-              />
-            </div>
-            <div className="flex justify-center items-center">
-              <img
-                src="typescript.svg"
-                className="w-10 h-10 sm:w-14 sm:h-14"
-                alt="TypeScript"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-      {/* 배경효과 */}
-      <div
-        className="absolute inset-x-0 bottom-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:bottom-[calc(100%-30rem)] rotate-180"
-        aria-hidden="true"
-      >
-        <div
-          className="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36rem] -translate-x-1/2 bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%+36rem)] sm:w-[72rem]"
-          style={{
-            clipPath:
-              "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
-          }}
-        ></div>
-      </div>
-      <div
-        className="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]"
-        aria-hidden="true"
-      >
-        <div
-          className="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36rem] -translate-x-1/2 bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%+36rem)] sm:w-[72rem]"
-          style={{
-            clipPath:
-              "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
-          }}
-        ></div>
+        ))}
       </div>
     </div>
   );

@@ -1,3 +1,4 @@
+import { useState } from "react";
 import LottiePlayer from "./LottiePlayer";
 
 interface ContactProps {
@@ -5,6 +6,12 @@ interface ContactProps {
 }
 
 const Contact: React.FC<ContactProps> = ({ sectionRef }) => {
+  const [copied, setCopied] = useState(false);
+  const handleCopyEmail = () => {
+    navigator.clipboard.writeText("hiro2329@naver.com");
+    setCopied(true);
+    setTimeout(() => setCopied(false), 1000);
+  };
   return (
     <section
       ref={sectionRef}
@@ -20,9 +27,18 @@ const Contact: React.FC<ContactProps> = ({ sectionRef }) => {
             <span className="block text-lg font-semibold text-gray-700 mb-2">
               이메일
             </span>
-            <span className="text-2xl text-blue-600 break-all select-text">
+            <span
+              className="text-2xl text-blue-600 break-all select-text cursor-pointer hover:underline"
+              onClick={handleCopyEmail}
+              title="클릭 시 복사"
+            >
               hiro2329@naver.com
             </span>
+            {copied && (
+              <span className="ml-3 text-green-600 text-base font-semibold">
+                복사됨!
+              </span>
+            )}
           </div>
           <div>
             <span className="block text-lg font-semibold text-gray-700 mb-2">
