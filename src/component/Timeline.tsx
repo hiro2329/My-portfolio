@@ -36,7 +36,8 @@ const timelineData: TimelineItem[] = [
   {
     year: "미래",
     title: "???",
-    description: "어떤 개발자가 될지 기대해주세요!!!",
+    description:
+      "아직 쓰이지 않은 미래의 이력, 그 페이지는 지금도 한 글자씩 채워지고 있습니다. 어떤 개발자가 되어 있을지, 저도 기대하고 있습니다!",
   },
 ];
 
