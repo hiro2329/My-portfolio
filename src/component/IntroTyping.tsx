@@ -70,17 +70,24 @@ const IntroTyping: React.FC = () => {
     return () => clearTimeout(timeoutId);
   }, [showTypewriter, currentLine]);
 
+  const highlightName = (text: string) => {
+    return text.replace(
+      /마준범/,
+      '<span class="text-violet-500 font-bold">마준범</span>'
+    );
+  };
+
   return (
     <div
       ref={containerRef}
       className="text-4xl md:text-6xl font-bold p-5 min-h-[60px]"
     >
       {printedLines.map((line, idx) => (
-        <div key={idx}>{line}</div>
+        <div key={idx} dangerouslySetInnerHTML={{ __html: highlightName(line) }} />
       ))}
       {showTypewriter && currentLine < typingLines.length && (
         <div>
-          {currentText}
+          <span dangerouslySetInnerHTML={{ __html: highlightName(currentText) }} />
           <span className="animate-pulse">|</span>
         </div>
       )}

@@ -1,12 +1,46 @@
-import React from "react";
+import React, { useRef, useEffect, useState } from "react";
 import About from "./About";
 import Skills from "./Skills";
+import { motion, useAnimation } from "framer-motion";
 
 interface IntroduceProps {
   sectionRef: React.RefObject<HTMLElement | null>;
 }
 
 const Introduce: React.FC<IntroduceProps> = ({ sectionRef }) => {
+  const aboutRef = useRef<HTMLDivElement>(null);
+  const controls = useAnimation();
+  const [, setInView] = useState(false);
+
+  useEffect(() => {
+    const ref = aboutRef.current;
+    if (!ref) return;
+    const observer = new window.IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setInView(true);
+            controls.start({
+              opacity: 1,
+              y: 0,
+              transition: { duration: 0.8, ease: "easeOut" },
+            });
+          } else {
+            setInView(false);
+            controls.start({
+              opacity: 0,
+              y: 50, // 원하는 초기 상태로 설정
+              transition: { duration: 0.2, ease: "easeIn" },
+            });
+          }
+        });
+      },
+      { threshold: 0.3 }
+    );
+    observer.observe(ref);
+    return () => observer.disconnect();
+  }, [controls]);
+
   return (
     <section
       ref={sectionRef}
@@ -29,10 +63,15 @@ const Introduce: React.FC<IntroduceProps> = ({ sectionRef }) => {
       </div>
       {/* 오른쪽: 자기소개 */}
       <div className="flex flex-col items-start justify-center px-4 md:px-6 py-8 md:py-0">
-        <div className="w-full text-start mx-auto">
+        <motion.div
+          ref={aboutRef}
+          initial={{ opacity: 0, y: 40 }}
+          animate={controls}
+          className="w-full text-start mx-auto"
+        >
           {/* 자기소개 제목 + 내용 */}
           <About />
-        </div>
+        </motion.div>
       </div>
     </section>
   );
