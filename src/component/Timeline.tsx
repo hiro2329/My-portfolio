@@ -16,28 +16,27 @@ const timelineData: TimelineItem[] = [
       "군 전역 후 어릴때부터 도전하고 싶었던 축구선수의 길에 1년간 도전해보았습니다. ",
   },
   {
-    year: "2022.02",
+    year: "2021.7",
+    title: "Hello World!",
+    description:
+      "처음 개발을 접한 순간입니다. HTML과 CSS로 간단한 웹페이지를 만들며 개발의 매력에 빠지기 시작했습니다.",
+  },
+  {
+    year: "2022.01",
     title: "인천일보 아카데미 수료",
     description:
-      "HTML과 CSS, JS, Oracle를 공부하면서 처음 웹 개발에 입문했습니다. Riot Games의 API를 활용한 웹앱을 만들었습니다.",
-  },
-  {
-    year: "2023.02",
-    title: "프론트엔드 부트캠프 수료",
-    description:
-      "React, Git, API 등 실무 기술을 익히고 팀 프로젝트를 경험했습니다.",
-  },
-  {
-    year: "2023.06",
-    title: "첫 API 연동",
-    description:
-      "OpenWeather API를 연동한 날씨 앱을 만들며 API를 처음으로 사용해봤습니다.",
+      "Riot Games의 API를 활용한 웹앱을 만들었습니다. 이 과정에서 JavaScript, Python, Oracle 기초를 다졌습니다.",
   },
   {
     year: "2025 ~ 현재",
     title: "KOSTA Node.js 과정 수료중",
     description:
       "KOSTA에서 Node.js와 React,TypeScript 등을 배우며 풀스택 개발에 대한 이해도를 높이고 있습니다.",
+  },
+  {
+    year: "미래",
+    title: "???",
+    description: "어떤 개발자가 될지 기대해주세요!!!",
   },
 ];
 
