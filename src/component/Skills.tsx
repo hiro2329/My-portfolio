@@ -14,14 +14,10 @@ import {
   SiMysql,
   SiMongodb,
   SiPython,
-  SiC,
-  SiCplusplus,
   SiVercel,
   SiRender,
 } from "react-icons/si";
-import { TbBrandCSharp } from "react-icons/tb";
 import { VscVscode } from "react-icons/vsc";
-import { DiVisualstudio } from "react-icons/di";
 
 const skills = [
   { name: "JavaScript", icon: <FaJs className="text-yellow-400" /> },
@@ -36,15 +32,10 @@ const skills = [
   { name: "HTML", icon: <FaHtml5 className="text-orange-500" /> },
   { name: "CSS", icon: <FaCss3Alt className="text-blue-500" /> },
   { name: "Python", icon: <SiPython className="text-blue-400" /> },
-  { name: "C", icon: <SiC className="text-blue-700" /> },
-  { name: "C++", icon: <SiCplusplus className="text-blue-500" /> },
-  { name: "C#", icon: <TbBrandCSharp className="text-purple-600" /> },
   { name: "GitHub", icon: <FaGithub className="text-gray-800" /> },
-
   { name: "Vercel", icon: <SiVercel className="text-black" /> },
   { name: "Render", icon: <SiRender className="text-blue-400" /> },
   { name: "VS Code", icon: <VscVscode className="text-blue-500" /> },
-  { name: "Visual Studio", icon: <DiVisualstudio className="text-blue-600" /> },
 ];
 
 const Skills: React.FC = () => {
@@ -53,7 +44,7 @@ const Skills: React.FC = () => {
       <h3 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4 font-[Comic Sans MS, Comic Sans, cursive]">
         Skills
       </h3>
-      <div className="w-full grid grid-cols-5 gap-3 md:gap-4 px-2 md:px-4">
+      <div className="w-full grid grid-cols-4 gap-3 md:gap-4 px-2 md:px-4">
         {skills.map((skill) => (
           <div
             key={skill.name}
